@@ -1,0 +1,7 @@
+{
+  "name": "ionicVueOauth",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
