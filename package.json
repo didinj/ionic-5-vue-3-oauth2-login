@@ -10,15 +10,21 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@capacitor/android": "^2.4.2",
     "@capacitor/core": "2.4.2",
+    "@capacitor/ios": "^2.4.2",
     "@ionic/vue": "^5.4.0",
     "@ionic/vue-router": "^5.4.0",
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
+    "qs": "^6.9.4",
     "vue": "^3.0.0-0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.2",
+    "@ionic/lab": "3.2.9",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",

@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
-
+import {store} from '@/store';
 import { IonicVue } from '@ionic/vue';
 
 /* Core CSS required for Ionic components to work properly */
@@ -22,10 +22,21 @@ import '@ionic/vue/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import ApiService from "@/services/api.service";
+import {TokenService} from "@/services/token.service";
 
 const app = createApp(App)
-  .use(IonicVue)
-  .use(router);
+    .use(IonicVue)
+    .use(router)
+    .use(store);
+
+ApiService.init(process.env.VUE_APP_ROOT_API);
+
+if (TokenService.getToken()) {
+  ApiService.setHeader();
+  ApiService.mountRequestInterceptor();
+  ApiService.mount401Interceptor();
+}
   
 router.isReady().then(() => {
   app.mount('#app');
