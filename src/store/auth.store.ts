@@ -69,9 +69,9 @@ const actions = {
         return state.refreshTokenPromise;
     },
 
-    async signup(context: any, {email, password, name}: any) {
+    async signup(context: any, {username, password, name}: any) {
         try {
-            await AuthService.signup(email, password, name);
+            await AuthService.signup(username, password, name);
             context.commit("processSuccess");
             return true;
         } catch (e) {

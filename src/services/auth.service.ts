@@ -84,13 +84,13 @@ const AuthService = {
         ApiService.unmount401Interceptor();
     },
 
-    signup: async function(email: any, password: any, name: any) {
+    signup: async function(username: any, password: any, name: any) {
         const signupData: AxiosRequestConfig = {
             method: "post",
             headers: { "Content-Type": "application/json" },
             url: "/oauth/signup",
             data: {
-                email: email,
+                username: username,
                 password: password,
                 name: name
             }
