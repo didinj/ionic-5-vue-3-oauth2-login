@@ -69,7 +69,7 @@ const AuthService = {
             ApiService.setHeader();
 
             return response.data.access_token;
-        } catch (error) {
+        } catch (error:any) {
             throw new AuthenticationError(
                 error.response.status,
                 error.response.data.error_description

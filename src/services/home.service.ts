@@ -17,7 +17,7 @@ const HomeService = {
     secretArea: async function() {
         try {
             return ApiService.get("/secret");
-        } catch (error) {
+        } catch (error: any) {
             throw new ResponseError(
                 error.status,
                 error.error.message
