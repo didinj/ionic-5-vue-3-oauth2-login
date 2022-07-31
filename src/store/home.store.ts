@@ -22,7 +22,7 @@ const actions = {
             const resp = await HomeService.secretArea();
             context.commit("dataSuccess", resp);
             return resp;
-        } catch (e) {
+        } catch (e :any) {
             if (e instanceof ResponseError) {
                 context.commit("dataError", {
                     errorMessage: e.errorMessage,

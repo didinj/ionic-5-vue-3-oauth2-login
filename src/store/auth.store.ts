@@ -44,7 +44,7 @@ const actions = {
 
     signOut(context: any) {
         context.commit("signOutRequest");
-        return new Promise((resolve) => {
+        return new Promise((resolve:any) => {
             AuthService.signOut();
             resolve();
         });
