@@ -12,7 +12,7 @@
 
         <ion-item>
           <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" v-model="form.password" id="email" required></ion-input>
+          <ion-input type="password" v-model="form.password" id="password" required></ion-input>
         </ion-item>
 
         <ion-item>
